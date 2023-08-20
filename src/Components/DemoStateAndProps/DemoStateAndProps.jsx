@@ -1,5 +1,6 @@
 // rafce
 import React, { useState } from 'react';
+import DemoProps from './DemoProps';
 
 const DemoStateAndProps = () => {
   // cách khai báo state
@@ -19,6 +20,7 @@ const DemoStateAndProps = () => {
       >
         Cộng thêm 1
       </button>
+      <DemoProps number={number} hoTen={hoTen} />
     </div>
   );
 };
