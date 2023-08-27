@@ -7,6 +7,8 @@ import DemoUseEffect from './Components/DemoUseEffect/DemoUseEffect';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import UserTemplate from './templates/UserTemplate/UserTemplate';
 import ItemDetail from './Components/ItemDetail/ItemDetail';
+import BaiTapHienThiGiay from './Components/BaiTapHienThiGiay/BaiTapHienThiGiay';
+import DetaiGiay from './Components/BaiTapHienThiGiay/DetaiGiay';
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
           <Route path="demo" element={<DemoUseEffect />} />
           <Route path="detail">
             <Route path=":id" element={<ItemDetail />} />
+          </Route>
+          {/* có thuộc tính index trong route giúp hiển thị component đó lên đầu tiên khi người dùng vừa vào trang đúng tới đường dẫn của route cha  */}
+          <Route index element={<BaiTapHienThiGiay />}></Route>
+          <Route path="chi-tiet-giay">
+            <Route path=":id" element={<DetaiGiay />} />
           </Route>
         </Route>
       </Routes>
